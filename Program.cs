@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-// Ejercicio 1
+// Calentamiento en C#
 
 int a;
 int b;
@@ -11,7 +11,7 @@ b = a;
 Console.WriteLine("Valor de a:" + a);
 Console.WriteLine("Valor de b:" + b);
 
-// Ejercicio 2
+// Ejercicio 1
 
 string num = "120";
 int i = 0;
