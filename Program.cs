@@ -17,13 +17,16 @@ float num = 0;
 
 Console.WriteLine("Ingrese un numero: ");
 stringNum = Console.ReadLine();
-bool result = float.TryParse(stringNum, out num);
+if (stringNum != null)
+{
+    bool result = float.TryParse(stringNum, out num);
 
-ValorAbsoluto(num);
-Cuadrado(num);
-RaizCuadrada(num);
-SenoYCoseno(num);
-RedondearNumero(num);
+    ValorAbsoluto(num);
+    Cuadrado(num);
+    RaizCuadrada(num);
+    SenoYCoseno(num);
+    RedondearNumero(num);
+}
 
 string stringNumA = "";
 string stringNumB = "";
@@ -35,10 +38,13 @@ stringNumA = Console.ReadLine();
 Console.WriteLine("Ingrese un 2do numero: ");
 stringNumB = Console.ReadLine();
 
-bool resultA = int.TryParse(stringNumA, out numA);
-bool resultB = int.TryParse(stringNumB, out numB);
+if (stringNumA != null && stringNumB != null)
+{
+    bool resultA = int.TryParse(stringNumA, out numA);
+    bool resultB = int.TryParse(stringNumB, out numB);
+    CompararNumeros(numA, numB);
+}
 
-CompararNumeros(numA, numB);
 
 // Funciones
 
@@ -75,7 +81,7 @@ void RedondearNumero(float num)
     double resultado = Math.Round(num);
 }
 
-void CompararNumeros(int numA,int numB)
+void CompararNumeros(int numA, int numB)
 {
     int max = Math.Max(numA, numB);
     int min = Math.Min(numA, numB);
