@@ -12,10 +12,12 @@ Console.WriteLine("Valor de b:" + b);
 
 // Ejercicio 3
 
+string stringNum = "";
 float num = 0;
 
 Console.WriteLine("Ingrese un numero: ");
-num = Console.Read();
+stringNum = Console.ReadLine();
+bool result = float.TryParse(stringNum, out num);
 
 ValorAbsoluto(num);
 Cuadrado(num);
@@ -23,13 +25,18 @@ RaizCuadrada(num);
 SenoYCoseno(num);
 RedondearNumero(num);
 
+string stringNumA = "";
+string stringNumB = "";
 int numA = 0;
 int numB = 0;
 
 Console.WriteLine("Ingrese un numero: ");
-numA = Console.Read();
+stringNumA = Console.ReadLine();
 Console.WriteLine("Ingrese un 2do numero: ");
-numB = Console.Read();
+stringNumB = Console.ReadLine();
+
+bool resultA = int.TryParse(stringNumA, out numA);
+bool resultB = int.TryParse(stringNumB, out numB);
 
 CompararNumeros(numA, numB);
 
