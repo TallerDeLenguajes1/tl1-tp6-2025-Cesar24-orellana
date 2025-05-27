@@ -27,78 +27,106 @@ while (i > 0)
 
 // Ejercicio 2
 
-int num1 = 0;
-int num2 = 0;
 int resultado = 0;
+string stringOpcion = "";
+string stringRepetir = "";
 int opcion = 0, repetir = 1;
 float resultadoReales = 0;
 do
 {
-    Console.WriteLine("\n1. Suma\n2. Resta \n3.Division\n4. Multiplicacion\n0. Salir");
-    opcion = Console.Read();
+    Console.WriteLine("\n1. Suma\n2. Resta \n3. Division\n4. Multiplicacion\n0. Salir");
+    stringOpcion = Console.ReadLine();
+    bool resultOption = int.TryParse(stringOpcion, out opcion);
     switch (opcion)
     {
         case 1:
-            resultado = FuncionSuma(num1, num2);
+            resultado = FuncionSuma();
             Mensaje(resultado);
             break;
         case 2:
-            resultado = FuncionResta(num1, num2);
+            resultado = FuncionResta();
             Mensaje(resultado);
             break;
         case 3:
-            resultadoReales = FuncionDivision(num1, num2);
+            resultadoReales = FuncionDivision();
             Mensaje2(resultadoReales);
             break;
         case 4:
-            resultado = FuncionMultiplicacion(num1, num2);
+            resultado = FuncionMultiplicacion();
             Mensaje(resultado);
             break;
     }
     Console.WriteLine("Desea Continuar?\n1. Si\0. No");
-    repetir = Console.Read();
+    stringRepetir = Console.ReadLine();
+    bool resultRepetir = int.TryParse(stringRepetir, out repetir);
 } while (repetir == 1);
 
-int FuncionSuma(int num1, int num2)
+int FuncionSuma()
 {
+    string stringNum1 = "";
+    string stringNum2 = "";
+    int num1 = 0;
+    int num2 = 0;
     Console.WriteLine("Ingrese un Numero: ");
-    num1 = Console.Read();
+    stringNum1 = Console.ReadLine();
     Console.WriteLine("Ingrese un 2do Numero: ");
-    num2 = Console.Read();
+    stringNum2 = Console.ReadLine();
+    bool resultNum1 = int.TryParse(stringNum1, out num1);
+    bool resultNum2 = int.TryParse(stringNum2, out num2);
     return num1 + num2;
 }
 
-int FuncionResta(int num1, int num2)
+int FuncionResta()
 {
+    string stringNum1 = "";
+    string stringNum2 = "";
+    int num1 = 0;
+    int num2 = 0;
     Console.WriteLine("Ingrese un Numero: ");
-    num1 = Console.Read();
+    stringNum1 = Console.ReadLine();
     Console.WriteLine("Ingrese un 2do Numero: ");
-    num2 = Console.Read();
+    stringNum2 = Console.ReadLine();
+    bool resultNum1 = int.TryParse(stringNum1, out num1);
+    bool resultNum2 = int.TryParse(stringNum2, out num2);
     return num1 - num2;
 }
 
-float FuncionDivision(int num1, int num2)
+float FuncionDivision()
 {
+    string stringNum1 = "";
+    string stringNum2 = "";
+    int num1 = 0;
+    int num2 = 0;
     Console.WriteLine("Ingrese un Numero: ");
-    num1 = Console.Read();
+    stringNum1 = Console.ReadLine();
     Console.WriteLine("Ingrese un 2do Numero: ");
-    num2 = Console.Read();
+    stringNum2 = Console.ReadLine();
+    bool resultNum1 = int.TryParse(stringNum1, out num1);
+    bool resultNum2 = int.TryParse(stringNum2, out num2);
     return num1 / num2;
 }
 
-int FuncionMultiplicacion(int num1, int num2)
+int FuncionMultiplicacion()
 {
+    string stringNum1 = "";
+    string stringNum2 = "";
+    int num1 = 0;
+    int num2 = 0;
     Console.WriteLine("Ingrese un Numero: ");
-    num1 = Console.Read();
+    stringNum1 = Console.ReadLine();
     Console.WriteLine("Ingrese un 2do Numero: ");
-    num2 = Console.Read();
+    stringNum2 = Console.ReadLine();
+    bool resultNum1 = int.TryParse(stringNum1, out num1);
+    bool resultNum2 = int.TryParse(stringNum2, out num2);
     return num1 * num2;
 }
 
-void Mensaje(int resultado) {
+void Mensaje(int resultado)
+{
     Console.WriteLine("Su resultado es: " + resultado);
 }
 
-void Mensaje2(float resultado) {
+void Mensaje2(float resultado)
+{
     Console.WriteLine("Su resultado es: " + resultado);
 }
