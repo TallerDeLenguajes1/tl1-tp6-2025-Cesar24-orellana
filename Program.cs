@@ -15,11 +15,11 @@ Console.WriteLine("Valor de b:" + b);
 
 string num = "120";
 int i = 0;
-bool result = int.TryParse(num, out i);
+bool result = int.TryParse(num, out i);  // Convierte un numero string en numero int/float/double/etc
 Console.Write(i);
 Console.WriteLine("");
 int aux = 0;
-while (i > 0)
+while (i > 0)   // Invierte el numero
 {
     aux = i % 10;
     i = i / 10;
