@@ -6,18 +6,18 @@ _¿String es una tipo por valor o por referencia?
 
 _¿Qué secuencias de escape tiene el tipo string?
 Secuencia       Significado
-\n               Nueva Linea
-\r              Retorno de carro
-\t           Tabulador Horizontal
-\'              Comilla simple
-\"              Comilla doble
-\0              Caracter nulo
-\a              Alerta o beep
-\b               Retroceso
-\f              Salto de pagina
-\v             Tabulador Vertical
-\uXXXX         Caracter Unico (Hex)
-\xXX            Caracter ASCII
+- \n               Nueva Linea
+- \r              Retorno de carro
+- \t           Tabulador Horizontal
+- \'              Comilla simple
+- \"              Comilla doble
+- \0              Caracter nulo
+- \a              Alerta o beep
+- \b               Retroceso
+- \f              Salto de pagina
+- \v             Tabulador Vertical
+- \uXXXX         Caracter Unico (Hex)
+- \xXX            Caracter ASCII
 
 _¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?
 @ - Cadena verbatil 
