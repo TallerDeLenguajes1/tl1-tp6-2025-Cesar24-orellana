@@ -26,4 +26,4 @@ Hace que la cadena:
 - Permite escribir en multiples lineas
 
 $ - Interpolación de Cadenas
-Permite insertar variables o expresiones directamente dentro de la cadena.
+Permite insertar variables o expresiones directamente dentro de la cadena, usando {}.
