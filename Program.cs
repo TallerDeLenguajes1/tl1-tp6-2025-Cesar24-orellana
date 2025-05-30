@@ -25,3 +25,4 @@ while (i > 0)   // Invierte el numero
     i = i / 10;
     Console.Write(aux);
 }
+
